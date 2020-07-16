@@ -2,7 +2,6 @@ package cmd
 
 import (
 	"fmt"
-	"log"
 	"strconv"
 
 	"github.com/spf13/cobra"
@@ -14,7 +13,6 @@ var addCmd = &cobra.Command{
 	Short: "Sum two number or more",
 	Long:  `Sum two number or more.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		log.Print(cmd.Flags())
 		fstatus, _ := cmd.Flags().GetBool("float")
 
 		if fstatus {
