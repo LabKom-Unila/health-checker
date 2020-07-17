@@ -17,6 +17,6 @@ var pingCmd = &cobra.Command{
 }
 
 func init() {
-	pingCmd.AddCommand(subcmd.RedisCmd, subcmd.MysqlCmd)
+	pingCmd.AddCommand(subcmd.RedisCmd, subcmd.MysqlCmd, subcmd.PgCmd)
 	rootCmd.AddCommand(pingCmd)
 }
