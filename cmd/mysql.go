@@ -26,7 +26,7 @@ var mysqlCmd = &cobra.Command{
 
 func init() {
 	rootCmd.AddCommand(mysqlCmd)
-	mysqlCmd.Flags().StringP("address", "a", "127.0.0.1:6379", "Host for MySQL")
+	mysqlCmd.Flags().StringP("address", "a", "127.0.0.1:3306", "Host for MySQL")
 	mysqlCmd.Flags().StringP("user", "u", "root", "User for MySQL")
 	mysqlCmd.Flags().StringP("password", "p", "root", "Password for MySQL")
 	mysqlCmd.Flags().StringP("database", "d", "root", "Database for MySQL")
