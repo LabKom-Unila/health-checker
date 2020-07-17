@@ -19,15 +19,15 @@ var PgCmd = &cobra.Command{
 		password, _ := cmd.Flags().GetString("password")
 		db, _ := cmd.Flags().GetString("db")
 
-		pingMysql(address, user, password, db)
+		pingPgsql(address, user, password, db)
 	},
 }
 
 func init() {
-	MysqlCmd.Flags().StringP("address", "a", "127.0.0.1:5432", "Host for PostgreSQL")
-	MysqlCmd.Flags().StringP("user", "u", "postgres", "User for PostgreSQL")
-	MysqlCmd.Flags().StringP("password", "p", "", "Password for PostgreSQL")
-	MysqlCmd.Flags().StringP("database", "d", "postgres", "Database for PostgreSQL")
+	PgCmd.Flags().StringP("address", "a", "127.0.0.1:5432", "Host for PostgreSQL")
+	PgCmd.Flags().StringP("user", "u", "postgres", "User for PostgreSQL")
+	PgCmd.Flags().StringP("password", "p", "", "Password for PostgreSQL")
+	PgCmd.Flags().StringP("database", "d", "postgres", "Database for PostgreSQL")
 }
 
 func pingPgsql(address, user, password, db string) {
