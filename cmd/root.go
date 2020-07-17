@@ -19,7 +19,7 @@ var rootCmd = &cobra.Command{
 	Long:  `Service Health-Checker before running your app.`,
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
-	Run: func(cmd *cobra.Command, args []string) { fmt.Println(`Welcome To The Health-Checker`) },
+	Run: func(cmd *cobra.Command, args []string) { _ = cmd.Help() },
 }
 
 // Execute adds all child commands to the root command and sets flags appropriately.
