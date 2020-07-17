@@ -1,4 +1,4 @@
-package cmd
+package subcmd
 
 import (
 	"database/sql"
@@ -9,8 +9,8 @@ import (
 	"github.com/spf13/cobra"
 )
 
-// mysqlCmd represents the mysql command
-var mysqlCmd = &cobra.Command{
+// MysqlCmd represents the mysql command
+var MysqlCmd = &cobra.Command{
 	Use:   "mysql",
 	Short: "Check if MySQL is alive or not",
 	Long:  `Check ping for MySQL.`,
@@ -25,11 +25,10 @@ var mysqlCmd = &cobra.Command{
 }
 
 func init() {
-	rootCmd.AddCommand(mysqlCmd)
-	mysqlCmd.Flags().StringP("address", "a", "127.0.0.1:3306", "Host for MySQL")
-	mysqlCmd.Flags().StringP("user", "u", "root", "User for MySQL")
-	mysqlCmd.Flags().StringP("password", "p", "root", "Password for MySQL")
-	mysqlCmd.Flags().StringP("database", "d", "root", "Database for MySQL")
+	MysqlCmd.Flags().StringP("address", "a", "127.0.0.1:3306", "Host for MySQL")
+	MysqlCmd.Flags().StringP("user", "u", "root", "User for MySQL")
+	MysqlCmd.Flags().StringP("password", "p", "root", "Password for MySQL")
+	MysqlCmd.Flags().StringP("database", "d", "root", "Database for MySQL")
 }
 
 func pingMysql(address, user, password, db string) {
