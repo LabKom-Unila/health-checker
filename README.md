@@ -17,10 +17,10 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Contributors](https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=flat-square)](https://github.com/LabKom-Unila/health-checker/graphs/contributors)
-[![Forks](https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=flat-square)](https://github.com/LabKom-Unila/health-checker/network/members)
-[![Stargazers](https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=flat-square)](https://github.com/LabKom-Unila/health-checker/stargazers)
-[![Issues](https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=flat-square)](https://github.com/LabKom-Unila/health-checker/issues)
+[![Contributors](https://img.shields.io/github/contributors/LabKom-Unila/health-checker?style=flat-square)](https://github.com/LabKom-Unila/health-checker/graphs/contributors)
+[![Forks](https://img.shields.io/github/forks/LabKom-Unila/health-checker?label=Fork&style=social)](https://github.com/LabKom-Unila/health-checker/network/members)
+[![Stargazers](https://img.shields.io/github/stars/LabKom-Unila/health-checker?style=social)](https://github.com/LabKom-Unila/health-checker/stargazers)
+[![Issues](https://img.shields.io/github/issues/LabKom-Unila/health-checker?style=flat-square)](https://github.com/LabKom-Unila/health-checker/issues)
 
 
 
@@ -97,7 +97,7 @@ go mod download
 ```sh
 go build .
 ```
-3. Add to your path
+4. Add to your path
 
 
 
