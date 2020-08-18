@@ -36,12 +36,12 @@ func pingMysql(address, user, password, db string) {
 
 	conn, err := sql.Open("mysql", dsn)
 	if err != nil {
-		fmt.Println(err)
+		fmt.Println(("\033[31m"), err)
 		return
 	}
 	if err = conn.Ping(); err != nil {
-		fmt.Println(err)
+		fmt.Println(("\033[31m"), err)
 		return
 	}
-	fmt.Println("Ping sucessful")
+	fmt.Println(("\033[32m"), "Ping sucessful")
 }

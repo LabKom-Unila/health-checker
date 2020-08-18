@@ -11,7 +11,7 @@ import (
 
 // RedisCmd represents the redis command
 var RedisCmd = &cobra.Command{
-	Use:   "redis",
+	Use:   "ping",
 	Short: "Check if Redis is alive or not",
 	Long:  `Check ping for Redis.`,
 	Run: func(cmd *cobra.Command, args []string) {
@@ -37,9 +37,9 @@ func pingRedis(address, password string) {
 	_, err := conn.Ping(context.Background()).Result()
 
 	if err != nil {
-		fmt.Println(err)
+		fmt.Println(("\033[31m"), err)
 		return
 	}
 
-	fmt.Println("Ping sucessful")
+	fmt.Println(("\033[32m"), "Ping sucessful")
 }
