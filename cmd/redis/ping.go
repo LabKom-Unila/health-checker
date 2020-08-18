@@ -37,9 +37,9 @@ func pingRedis(address, password string) {
 	_, err := conn.Ping(context.Background()).Result()
 
 	if err != nil {
-		fmt.Println(("\033[31m"), err)
+		fmt.Println(("\033[31m"), err, "\u274c")
 		return
 	}
 
-	fmt.Println(("\033[32m"), "Ping sucessful")
+	fmt.Println(("\033[32m"), "Ping sucessful \u2714")
 }

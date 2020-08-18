@@ -35,12 +35,13 @@ func pingPgsql(address, user, password, db string) {
 
 	conn, err := sql.Open("postgres", dsn)
 	if err != nil {
-		fmt.Println(("\033[31m"), err)
+		fmt.Println(("\033[31m"), err, "\u274c")
 		return
 	}
 	if err = conn.Ping(); err != nil {
-		fmt.Println(("\033[31m"), err)
+		fmt.Println(("\033[31m"), err, "\u274c")
 		return
 	}
-	fmt.Println(("\033[32m"), "Ping sucessful")
+
+	fmt.Println(("\033[32m"), "Ping sucessful \u2714")
 }
