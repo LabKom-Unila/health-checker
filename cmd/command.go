@@ -3,11 +3,12 @@ package cmd
 import (
 	"github.com/LabKom-Unila/health-checker/cmd/mysql"
 	"github.com/LabKom-Unila/health-checker/cmd/pg"
+	"github.com/LabKom-Unila/health-checker/cmd/redis"
 
 	"github.com/spf13/cobra"
 )
 
-// pingCmd represents the ping command
+// pgCmd for postgres utilty
 var pgCmd = &cobra.Command{
 	Use:   "postgres",
 	Short: "PostgreSQL",
@@ -17,7 +18,8 @@ var pgCmd = &cobra.Command{
 	},
 }
 
-var mySqlCmd = &cobra.Command{
+// mySQLCmd for MySQL utilty
+var mySQLCmd = &cobra.Command{
 	Use:   "mysql",
 	Short: "MySQL",
 	Long:  `MySQL service.`,
@@ -26,17 +28,22 @@ var mySqlCmd = &cobra.Command{
 	},
 }
 
+// redisCmd for Redis utilty
 var redisCmd = &cobra.Command{
-	Use:   "mysql",
-	Short: "MySQL",
-	Long:  `MySQL service.`,
+	Use:   "redis",
+	Short: "Redis",
+	Long:  `Redis service.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		_ = cmd.Help()
 	},
 }
 
 func init() {
+	// main command for CLI
 	pgCmd.AddCommand(pg.PingCmd)
-	mySqlCmd.AddCommand(mysql.PingCmd)
-	rootCmd.AddCommand(pgCmd, mySqlCmd)
+	mySQLCmd.AddCommand(mysql.PingCmd)
+	redisCmd.AddCommand(redis.RedisCmd)
+
+	// root command
+	rootCmd.AddCommand(pgCmd, mySQLCmd, redisCmd)
 }
