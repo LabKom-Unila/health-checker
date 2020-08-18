@@ -11,7 +11,7 @@ import (
 
 // RedisCmd represents the redis command
 var RedisCmd = &cobra.Command{
-	Use:   "redis",
+	Use:   "ping",
 	Short: "Check if Redis is alive or not",
 	Long:  `Check ping for Redis.`,
 	Run: func(cmd *cobra.Command, args []string) {
