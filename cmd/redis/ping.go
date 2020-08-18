@@ -2,8 +2,8 @@ package redis
 
 import (
 	"context"
-	"fmt"
 
+	"github.com/LabKom-Unila/health-checker/helper"
 	"github.com/go-redis/redis/v8"
 
 	"github.com/spf13/cobra"
@@ -37,9 +37,9 @@ func pingRedis(address, password string) {
 	_, err := conn.Ping(context.Background()).Result()
 
 	if err != nil {
-		fmt.Println(("\033[31m"), err, "\u274c")
+		helper.ErrorOutput(err)
 		return
 	}
 
-	fmt.Println(("\033[32m"), "Ping sucessful \u2714")
+	helper.SuccessOutput()
 }

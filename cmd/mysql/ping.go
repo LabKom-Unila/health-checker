@@ -4,6 +4,7 @@ import (
 	"database/sql"
 	"fmt"
 
+	"github.com/LabKom-Unila/health-checker/helper"
 	_ "github.com/go-sql-driver/mysql"
 
 	"github.com/spf13/cobra"
@@ -36,13 +37,13 @@ func pingMysql(address, user, password, db string) {
 
 	conn, err := sql.Open("mysql", dsn)
 	if err != nil {
-		fmt.Println(("\033[31m"), err, "\u274c")
+		helper.ErrorOutput(err)
 		return
 	}
 	if err = conn.Ping(); err != nil {
-		fmt.Println(("\033[31m"), err, "\u274c")
+		helper.ErrorOutput(err)
 		return
 	}
 
-	fmt.Println(("\033[32m"), "Ping sucessful \u2714")
+	helper.SuccessOutput()
 }
