@@ -1,4 +1,4 @@
-package subcmd
+package pg
 
 import (
 	"database/sql"
@@ -8,9 +8,9 @@ import (
 	"github.com/spf13/cobra"
 )
 
-// PgCmd represents the pg command
-var PgCmd = &cobra.Command{
-	Use:   "pg",
+// PingCmd represents the pg command
+var PingCmd = &cobra.Command{
+	Use:   "ping",
 	Short: "Check if PostgreSQL is alive or not",
 	Long:  `Check ping for PostgreSQL.`,
 	Run: func(cmd *cobra.Command, args []string) {
@@ -24,10 +24,10 @@ var PgCmd = &cobra.Command{
 }
 
 func init() {
-	PgCmd.Flags().StringP("address", "a", "127.0.0.1:5432", "Host for PostgreSQL")
-	PgCmd.Flags().StringP("user", "u", "postgres", "User for PostgreSQL")
-	PgCmd.Flags().StringP("password", "p", "", "Password for PostgreSQL")
-	PgCmd.Flags().StringP("database", "d", "postgres", "Database for PostgreSQL")
+	PingCmd.Flags().StringP("address", "a", "127.0.0.1:5432", "Host for PostgreSQL")
+	PingCmd.Flags().StringP("user", "u", "postgres", "User for PostgreSQL")
+	PingCmd.Flags().StringP("password", "p", "", "Password for PostgreSQL")
+	PingCmd.Flags().StringP("database", "d", "postgres", "Database for PostgreSQL")
 }
 
 func pingPgsql(address, user, password, db string) {
