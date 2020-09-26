@@ -139,8 +139,6 @@ Contributions are what make the open source community such an amazing place to b
 <!-- CONTACT -->
 ## Contact
 
-Arham Abiyan - [@arham_abiyan](https://twitter.com/arham_abiyan) - arham.abiyan@gmail.com
-
 Project Link: [https://github.com/LabKom-Unila/health-checker](https://github.com/LabKom-Unila/health-checker)
 
 
