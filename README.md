@@ -2,11 +2,6 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
-*** Thanks for checking out this README Template. If you have a suggestion that would
-*** make this better, please fork the repo and create a pull request or simply open
-*** an issue with the tag "enhancement".
-*** Thanks again! Now go create something AMAZING! :D
--->
 
 
 
@@ -20,7 +15,6 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Contributors](https://img.shields.io/github/contributors/LabKom-Unila/health-checker?style=flat-square)](https://github.com/LabKom-Unila/health-checker/graphs/contributors)
 [![Forks](https://img.shields.io/github/forks/LabKom-Unila/health-checker?label=Fork&style=social)](https://github.com/LabKom-Unila/health-checker/network/members)
 [![Stargazers](https://img.shields.io/github/stars/LabKom-Unila/health-checker?style=social)](https://github.com/LabKom-Unila/health-checker/stargazers)
 [![Issues](https://img.shields.io/github/issues/LabKom-Unila/health-checker?style=flat-square)](https://github.com/LabKom-Unila/health-checker/issues)
@@ -30,7 +24,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <h3 align="center">Service Checker CLI</h3>
+  <h3 align="center">Health Checker CLI</h3>
 
   <p align="center">
     Easy to use CLI tools to check dependant services before running your project!
